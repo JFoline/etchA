@@ -12,4 +12,5 @@
 	display: grid;
 	width:640px;
 	height:640px;
+	border-style:outset;
 }
