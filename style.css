@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Pacifico');
+
 * {
 	margin:0;
 	padding:0;
@@ -7,22 +9,59 @@
 #wrapper{
 	text-align: center;
 	display:box;
-	margin:0 auto;
+	margin: 0 auto;
+}
+
+#title{
+	margin: 0 auto;
+	width:690px;
+	background-color: #083D77;
 }
 
 #container{
-	margin-top: 20px;
 	display: inline-grid;
-	width:640px;
-	height:640px;
-	border-style:outset;
+	width:690px;
+	height:690px;
+	border-style: ridge;
+	border-color: #083D77;
+	border-width: 50px;
+	background-color: #EEEEEE;
 }
 
+h1{
+	font-family: 'Pacifico', cursive;
+	font-size:48px;
+	color:#F4D35E;
+}
+button{
+	font-family: 'Oswald', sans-serif;
+	padding:6px;
+	width:86px;
+	height:32px;
+	margin-bottom: 12px;
+	color: #083D77;
+	background: #DDDDDD;
+}
+.slider{
+	-webkit-appearance: none;
+	height: 32px;
+	width:320px;
+	background: #DDDDDD;
+	outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  background: #F4D35E;
+  cursor: pointer;
+}
 .emptyCell{
-	border-style: outset;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #DDDDDD;
 }
-
 .fullCell{
-	border-style:inset;
-	background-color:black;
+	background-color:#111111;
 }

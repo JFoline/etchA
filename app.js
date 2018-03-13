@@ -1,14 +1,20 @@
-let x = 16;
+let x =  document.getElementById("boardSize");
 let container = document.querySelector('#container');
 let clearCell =document.querySelector('#clear');
 
+
+let output = document.getElementById("demo");
+output.innerHTML = x.value;
+x.oninput = function() {
+  output.innerHTML = this.value;
+  x = this.value
+}
 
 function growHost(){
   for (let i = 0; i < x * x; i++) {
     let singleCell = document.createElement('div');
     singleCell.classList.add('emptyCell');
     container.appendChild(singleCell);
-
     singleCell.onmouseenter = function(){
     singleCell.classList.add('fullCell');
     };
@@ -24,7 +30,8 @@ function killColony(){
 }
 
 clearCell.onclick = function(){
-killColony();
-let y = prompt("Pick a new board side", x);
-growHost(x = y);
+  killColony();
+
+  growHost(x.value);
 };
+growHost(x = 16);
