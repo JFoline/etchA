@@ -1,7 +1,7 @@
-let x = 4;
+let x = 16;
 let container = document.querySelector('#container');
 let clearCell =document.querySelector('#clear');
-growHost();
+
 
 function growHost(){
   for (let i = 0; i < x * x; i++) {
@@ -23,7 +23,8 @@ function killColony(){
   }
 }
 
-clearCell.addEventListener('click', function(){
+clearCell.onclick = function(){
 killColony();
-growHost();
-});
+let y = prompt("Pick a new board side", x);
+growHost(x = y);
+};
