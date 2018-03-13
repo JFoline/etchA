@@ -6,11 +6,23 @@
 
 #wrapper{
 	text-align: center;
+	display:box;
+	margin:0 auto;
 }
 
 #container{
-	display: grid;
+	margin-top: 20px;
+	display: inline-grid;
 	width:640px;
 	height:640px;
 	border-style:outset;
+}
+
+.emptyCell{
+	border-style: outset;
+}
+
+.fullCell{
+	border-style:inset;
+	background-color:black;
 }
